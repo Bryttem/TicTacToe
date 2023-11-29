@@ -1,27 +1,60 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+.game {
+  max-width: 300px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.status {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.board {
+  display: grid;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: rgb(255, 0, 0);
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.square:hover {
+  background-color: rgb(77, 1, 1);
+}
+
+.restart-button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #2d3748;
+  color: #ffffff;
+  border: 1px solid #1a202c;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restart-button:hover {
+  background-color: #1a202c;
 }
