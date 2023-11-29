@@ -42,8 +42,8 @@ const TicTacToe: React.FC = () => {
 
   return (
     <div className="game">
-      <div className="estado">{status}</div>
-      <div className="tablero cuadro-tablero">
+      <div className="status">{status}</div>
+      <div className="board square-board">
         {Array.from({ length: 3 }, (_, row) => (
           <div key={row} className="board-row">
             {Array.from({ length: 3 }, (_, col) =>
